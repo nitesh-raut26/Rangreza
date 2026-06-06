@@ -1,26 +1,207 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ──────────────────────────────────────────────────────────
+   Rangreza Thread — Mithila heritage design system
+   Warm handmade-paper cream · natural Madhubani pigments
+   ────────────────────────────────────────────────────────── */
+@theme {
+  /* Typefaces */
+  --font-display: var(--font-fraunces), ui-serif, Georgia, "Times New Roman",
+    serif;
+  --font-sans: var(--font-mukta), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, sans-serif;
+  --font-deva: var(--font-tiro), var(--font-mukta), serif;
+
+  /* Paper & ink */
+  --color-paper: #fbf6ec;
+  --color-paper-2: #f4ead7;
+  --color-paper-3: #ead9bd;
+  --color-ink: #2a1d12;
+  --color-ink-soft: #4e3b2b;
+  --color-muted: #735c45;
+  --color-faint: #a38e72;
+  --color-line: #e7d9c0;
+  --color-line-strong: #d8c4a2;
+
+  /* Natural Madhubani pigments */
+  --color-madder: #9b2226; /* primary — madder red */
+  --color-madder-deep: #7a1a1d;
+  --color-terracotta: #be5a2a;
+  --color-turmeric: #d29a2e;
+  --color-indigo: #34406b;
+  --color-leaf: #356b4d;
+  --color-gold: #b0863a;
+
+  /* Radii — refined, slightly architectural */
+  --radius-xl: 0.875rem;
+  --radius-2xl: 1.125rem;
+  --radius-3xl: 1.5rem;
+
+  /* Warm shadows */
+  --shadow-soft: 0 1px 2px rgba(42, 29, 18, 0.05),
+    0 12px 30px -16px rgba(42, 29, 18, 0.22);
+  --shadow-lift: 0 1px 2px rgba(42, 29, 18, 0.06),
+    0 26px 60px -24px rgba(42, 29, 18, 0.32);
+
+  /* Motion */
+  --animate-marquee: marquee 42s linear infinite;
+  --animate-float: float 11s ease-in-out infinite;
+  --animate-sway: sway 8s ease-in-out infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-2.5deg);
+  }
+  50% {
+    transform: rotate(2.5deg);
   }
 }
 
+/* ── Base ─────────────────────────────────────────────────── */
+:root {
+  color-scheme: light;
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-madder);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-madder);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Utilities ────────────────────────────────────────────── */
+.font-display {
+  font-family: var(--font-display);
+}
+.font-deva {
+  font-family: var(--font-deva);
+}
+
+/* subtle handmade-paper grain */
+.paper-texture {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+.text-madder-gradient {
+  background: linear-gradient(100deg, var(--color-madder), var(--color-terracotta) 60%, var(--color-turmeric));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* thin decorative rule with a centered diamond */
+.rule-deco {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.rule-deco::before,
+.rule-deco::after {
+  content: "";
+  height: 1px;
+  width: 3rem;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-line-strong)
+  );
+}
+.rule-deco::after {
+  background: linear-gradient(to left, transparent, var(--color-line-strong));
+}
+
+.mask-fade-x {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Scroll reveal (visible by default if no JS / reduced motion) */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
