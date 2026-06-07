@@ -2,7 +2,7 @@
  * Rangreza Thread — brand, contact and navigation config.
  *
  * Real contact details for Archna Jha / Rangreza Thread.
- *     Still placeholders: the Instagram handle and the production `url`.
+ *     Still placeholders: the Instagram handle.
  *     Everything on the site (order buttons, footer, contact) reads from here.
  */
 export const site = {
@@ -10,7 +10,7 @@ export const site = {
   nameDeva: "रंगरेज़ा",
   legalName: "Rangreza Thread",
   // Production URL (used for canonical / OG / sitemap).
-  url: "https://www.rangrezathread.com",
+  url: "https://www.rangrezas.com",
   tagline: "Hand-painted Mithila art, woven into every thread.",
   description:
     "Rangreza Thread brings the centuries-old folk art of Mithila to life on handwoven sarees, dupattas, kurtas, paag and dhotis — each piece painted by hand, no two alike.",

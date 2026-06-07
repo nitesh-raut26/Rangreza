@@ -81,7 +81,7 @@ export default function OpengraphImage() {
             <span>·</span>
             <span>One of a kind</span>
             <span>·</span>
-            <span>rangrezathread.com</span>
+            <span>rangrezas.com</span>
           </div>
         </div>
       </div>
