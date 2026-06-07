@@ -1,11 +1,11 @@
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
-import { Lotus } from "@/components/motifs";
+import { RangrezaMonogram } from "@/components/logo";
 
 export default function NotFound() {
   return (
     <Container className="flex min-h-[60vh] flex-col items-center justify-center py-24 text-center">
-      <Lotus className="size-16 text-madder/40" />
+      <RangrezaMonogram className="size-20 opacity-60" />
       <h1 className="mt-6 font-display text-4xl font-medium tracking-tight text-ink sm:text-5xl">
         This thread leads nowhere.
       </h1>
