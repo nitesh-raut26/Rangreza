@@ -17,7 +17,7 @@ import {
   getProduct,
   productsByCategory,
   featuredProducts,
-  formatINR,
+  priceLabel,
 } from "@/lib/products";
 import { getCollection } from "@/lib/collections";
 import { waLink } from "@/lib/whatsapp";
@@ -36,7 +36,7 @@ export async function generateMetadata({
   const product = getProduct(slug);
   if (!product) return {};
   return buildMetadata({
-    title: `${product.name} — ${formatINR(product.price)}`,
+    title: `${product.name} — ${priceLabel(product)}`,
     description: product.shortDesc,
     path: `/shop/${product.slug}`,
     keywords: [product.name, product.categoryLabel, product.fabric, "Madhubani", "Mithila"],
@@ -135,9 +135,12 @@ export default async function ProductPage({
               <h1 className="mt-3 font-display text-3xl font-medium leading-tight tracking-tight text-ink sm:text-4xl">
                 {product.name}
               </h1>
+              <p className="mt-1.5 text-sm text-faint">
+                Product code · {product.code}
+              </p>
               <div className="mt-4 flex items-center gap-4">
                 <span className="font-display text-2xl font-medium text-madder">
-                  {formatINR(product.price)}
+                  {priceLabel(product)}
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-leaf/10 px-3 py-1 text-xs font-medium text-leaf ring-1 ring-inset ring-leaf/20">
                   <Sparkles className="size-3.5" />

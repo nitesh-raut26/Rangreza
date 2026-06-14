@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import type { Product } from "@/lib/products";
-import { formatINR } from "@/lib/products";
+import { priceLabel } from "@/lib/products";
 import { ArtworkPlaceholder } from "@/components/artwork-placeholder";
 import { WhatsAppOrder } from "@/components/whatsapp-order";
 import { cn } from "@/lib/cn";
@@ -58,7 +58,7 @@ export function ProductCard({
             </Link>
           </h3>
           <span className="shrink-0 font-display text-lg font-medium text-madder">
-            {formatINR(product.price)}
+            {priceLabel(product)}
           </span>
         </div>
 

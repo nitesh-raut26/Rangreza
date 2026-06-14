@@ -74,6 +74,26 @@ export function websiteLd() {
 }
 
 export function productLd(product: Product) {
+  const availability = product.madeToOrder
+    ? "https://schema.org/PreOrder"
+    : "https://schema.org/InStock";
+  const seller = { "@type": "Organization", name: site.name };
+  const offers = product.priceMax
+    ? {
+        "@type": "AggregateOffer",
+        priceCurrency: "INR",
+        lowPrice: String(product.price),
+        highPrice: String(product.priceMax),
+        availability,
+        seller,
+      }
+    : {
+        "@type": "Offer",
+        price: String(product.price),
+        priceCurrency: "INR",
+        availability,
+        seller,
+      };
   return {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -81,17 +101,10 @@ export function productLd(product: Product) {
     description: product.shortDesc,
     category: product.categoryLabel,
     material: product.fabric,
+    sku: product.code,
     brand: { "@type": "Brand", name: site.name },
     url: new URL(`/shop/${product.slug}`, metaBase).toString(),
-    offers: {
-      "@type": "Offer",
-      price: String(product.price),
-      priceCurrency: "INR",
-      availability: product.madeToOrder
-        ? "https://schema.org/PreOrder"
-        : "https://schema.org/InStock",
-      seller: { "@type": "Organization", name: site.name },
-    },
+    offers,
   };
 }
 
