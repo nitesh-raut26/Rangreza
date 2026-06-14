@@ -1,3 +1,5 @@
+import type { MotifName } from "@/components/motifs";
+
 /**
  * Product categories. Each drives the shop filters, the home "collections"
  * grid and its own anchored section on /shop.
@@ -10,7 +12,8 @@ export type Collection = {
   nameDeva?: string;
   blurb: string;
   accent: string;
-  motif: "fish" | "lotus" | "peacock" | "sun" | "tree";
+  /** Icon shown in the collections grid and the shop section headers. */
+  motif: MotifName;
 };
 
 export const collections: Collection[] = [
@@ -21,7 +24,7 @@ export const collections: Collection[] = [
     blurb:
       "Hand-painted Mithila drapes on Paper Tussar, Munga Tussar silk and Leanon cotton.",
     accent: "#9b2226",
-    motif: "fish",
+    motif: "saree",
   },
   {
     slug: "suits",
@@ -30,7 +33,7 @@ export const collections: Collection[] = [
     blurb:
       "Madhubani-painted suit sets in Leanon cotton — made to order, stitched to your measure.",
     accent: "#356b4d",
-    motif: "peacock",
+    motif: "suit",
   },
   {
     slug: "kurtas",
@@ -38,7 +41,7 @@ export const collections: Collection[] = [
     nameDeva: "कुर्ता",
     blurb: "Madhubani kurtas for men in cotton, silk and lustrous Tussar silk.",
     accent: "#be5a2a",
-    motif: "tree",
+    motif: "kurta",
   },
   {
     slug: "dupattas",
@@ -47,7 +50,7 @@ export const collections: Collection[] = [
     blurb:
       "Temple-border dupattas in cotton and silk — everyday Mithila colour over the shoulder.",
     accent: "#d29a2e",
-    motif: "lotus",
+    motif: "dupatta",
   },
   {
     slug: "dopta",
@@ -56,7 +59,7 @@ export const collections: Collection[] = [
     blurb:
       "The traditional men's dopta — a hand-painted silk-cotton shoulder drape for festive days.",
     accent: "#34406b",
-    motif: "sun",
+    motif: "dopta",
   },
   {
     slug: "paag",
@@ -65,7 +68,7 @@ export const collections: Collection[] = [
     blurb:
       "The Mithila crown of honour, hand-painted in cotton and silk for weddings and tilak.",
     accent: "#b0863a",
-    motif: "sun",
+    motif: "paag",
   },
   {
     slug: "bangles",
@@ -74,7 +77,7 @@ export const collections: Collection[] = [
     blurb:
       "Hand-painted Madhubani lac bangles — wearable folk art, from a single piece to a full stack.",
     accent: "#7a1a1d",
-    motif: "lotus",
+    motif: "bangle",
   },
 ];
 
