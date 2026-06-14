@@ -1,6 +1,8 @@
 /**
  * Product categories. Each drives the shop filters, the home "collections"
  * grid and its own anchored section on /shop.
+ *
+ * The order here is the order categories appear on /shop.
  */
 export type Collection = {
   slug: string;
@@ -17,41 +19,62 @@ export const collections: Collection[] = [
     name: "Sarees",
     nameDeva: "साड़ी",
     blurb:
-      "Hand-painted drapes on Tussar silk, handwoven linen and soft mul cotton.",
+      "Hand-painted Mithila drapes on Paper Tussar, Munga Tussar silk and Leanon cotton.",
     accent: "#9b2226",
     motif: "fish",
   },
   {
+    slug: "suits",
+    name: "Suits",
+    nameDeva: "सूट",
+    blurb:
+      "Madhubani-painted suit sets in Leanon cotton — made to order, stitched to your measure.",
+    accent: "#356b4d",
+    motif: "peacock",
+  },
+  {
+    slug: "kurtas",
+    name: "Men's Kurtas",
+    nameDeva: "कुर्ता",
+    blurb: "Madhubani kurtas for men in cotton, silk and lustrous Tussar silk.",
+    accent: "#be5a2a",
+    motif: "tree",
+  },
+  {
     slug: "dupattas",
-    name: "Dupattas & Stoles",
+    name: "Dupattas",
     nameDeva: "दुपट्टा",
-    blurb: "Lightweight everyday luxury — a wash of Mithila colour over the shoulder.",
+    blurb:
+      "Temple-border dupattas in cotton and silk — everyday Mithila colour over the shoulder.",
     accent: "#d29a2e",
     motif: "lotus",
   },
   {
-    slug: "kurtas",
-    name: "Kurtas",
-    nameDeva: "कुर्ता",
-    blurb: "Khadi and cotton kurtas carrying motifs of myth and nature.",
-    accent: "#356b4d",
-    motif: "peacock",
+    slug: "dopta",
+    name: "Men's Dopta",
+    nameDeva: "दोपटा",
+    blurb:
+      "The traditional men's dopta — a hand-painted silk-cotton shoulder drape for festive days.",
+    accent: "#34406b",
+    motif: "sun",
   },
   {
     slug: "paag",
     name: "Paag",
     nameDeva: "पाग",
-    blurb: "The Mithila crown of honour, hand-painted for weddings and festivals.",
-    accent: "#34406b",
+    blurb:
+      "The Mithila crown of honour, hand-painted in cotton and silk for weddings and tilak.",
+    accent: "#b0863a",
     motif: "sun",
   },
   {
-    slug: "dhoti",
-    name: "Dhoti & Angvastra",
-    nameDeva: "धोती",
-    blurb: "Ceremonial sets for the groom and for sacred occasions.",
-    accent: "#be5a2a",
-    motif: "tree",
+    slug: "bangles",
+    name: "Bangles",
+    nameDeva: "चूड़ी",
+    blurb:
+      "Hand-painted Madhubani lac bangles — wearable folk art, from a single piece to a full stack.",
+    accent: "#7a1a1d",
+    motif: "lotus",
   },
 ];
 

@@ -13,7 +13,7 @@ export const site = {
   url: "https://www.rangrezas.com",
   tagline: "Hand-painted Mithila art, woven into every thread.",
   description:
-    "Rangreza Thread brings the centuries-old folk art of Mithila to life on handwoven sarees, dupattas, kurtas, paag and dhotis — each piece painted by hand, no two alike.",
+    "Rangreza Thread brings the centuries-old folk art of Mithila to life on hand-painted sarees, suits, kurtas, dupattas, paag and lac bangles — each piece painted by hand, no two alike.",
   // ── Contact ──────────────────────────────────────────────
   whatsapp: "919205711828", // digits only, for wa.me links
   phoneDisplay: "+91 92057 11828",
