@@ -35,8 +35,8 @@ export function Hero() {
           </h1>
           <p className="mt-6 text-pretty text-lg leading-relaxed text-muted">
             Rangreza Thread hand-paints the centuries-old Madhubani tradition
-            onto sarees, dupattas, kurtas, paag and dhotis — no two pieces ever
-            alike.
+            onto sarees, suits, kurtas, dupattas, paag and lac bangles — no two
+            pieces ever alike.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">

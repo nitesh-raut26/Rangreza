@@ -54,8 +54,8 @@ export default function AboutPage() {
                   Founded by{" "}
                   <span className="text-ink">{site.founderName}</span>, Rangreza
                   Thread was born to carry that brush beyond the wall. We seek
-                  out handwoven sarees, dupattas, kurtas, paag and dhotis, and
-                  our Mithila artists paint each one by hand — so the art you
+                  out handwoven sarees, suits, kurtas, dupattas, paag and lac
+                  bangles, and our Mithila artists paint each one by hand — so the art you
                   love can be{" "}
                   <span className="text-ink">worn, not just framed</span>.
                 </p>

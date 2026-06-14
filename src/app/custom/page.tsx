@@ -10,12 +10,12 @@ import { buildMetadata, breadcrumbLd } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Custom Order — commission a hand-painted Mithila piece",
   description:
-    "Commission a custom hand-painted Madhubani saree, dupatta, kurta, paag or dhoti — your garment, your motif, your colours, painted by Mithila artists.",
+    "Commission a custom hand-painted Madhubani saree, suit, kurta, dupatta, paag or lac bangle — your garment, your motif, your colours, painted by Mithila artists.",
   path: "/custom",
 });
 
 const customisable = [
-  "The garment — saree, dupatta, kurta, paag or dhoti",
+  "The garment — saree, suit, kurta, dupatta, paag or bangles",
   "The motif — fish, peacock, lotus, Kohbar or your own idea",
   "The colours — from soft naturals to festive brights",
   "The occasion — bridal, gifting, festival or everyday",

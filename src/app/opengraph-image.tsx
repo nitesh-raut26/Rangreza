@@ -113,7 +113,7 @@ export default function OpengraphImage() {
               display: "flex",
             }}
           >
-            Madhubani art, painted by hand onto sarees, dupattas, kurtas &amp; more.
+            Madhubani art, painted by hand onto sarees, suits, kurtas, bangles &amp; more.
           </div>
 
           {/* Footer pills */}

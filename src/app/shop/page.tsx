@@ -12,16 +12,17 @@ import { productsByCategory } from "@/lib/products";
 import { buildMetadata, breadcrumbLd } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Shop — hand-painted Mithila sarees, dupattas & more",
+  title: "Shop — hand-painted Mithila sarees, suits, kurtas & more",
   description:
-    "Browse hand-painted Madhubani sarees, dupattas, kurtas, paag and dhoti sets. Each piece is painted by hand, made to order, and entirely one of a kind.",
+    "Browse hand-painted Madhubani sarees, suits, men's kurtas, dupattas, dopta, paag and lac bangles. Each piece is painted by hand, made to order, and entirely one of a kind.",
   path: "/shop",
   keywords: [
     "buy Madhubani saree",
     "hand painted saree online",
-    "Mithila painting dupatta",
+    "Madhubani suit set",
     "hand painted kurta",
     "Mithila paag",
+    "Madhubani lac bangle",
   ],
 });
 
